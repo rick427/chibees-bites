@@ -529,8 +529,9 @@ input:checked + .slider:before {
 }
 
 .form{
-    margin-top: 3rem;
+    margin: 3rem auto 0 auto;
     padding: 1rem;
+    width: 90%;
 }
 
 .form__inner{
@@ -548,7 +549,7 @@ input:checked + .slider:before {
 
 .form__message{
     padding: 1rem;
-    width: 58rem;
+    width: 90%;
     height: 4rem;
     resize: none;
     border: 1px solid var(--text-brown-2);
