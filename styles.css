@@ -1,0 +1,537 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+:root{
+    --background: #FDFBF6;
+    --dark: #2d3748;
+    --dark-text-primary: #f7fafc;
+    --text-primary: #1a202c;
+    --text-brown: #251707;
+    --text-brown-2: #876248;
+    --text-brown-3: #36180B;
+    --text-light-grey: #f1f1f1;
+}
+
+.dark-mode{
+    /* --background: #4a5568; */
+    --background: #fff;
+    --text-primary: #f7fafc;
+    --text-brown-2: #de2f40;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--background);
+}
+
+body::-webkit-scrollbar{
+    width: .8rem;
+}
+
+body::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: var(--text-brown-2);
+    border-radius: 20px;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background: url('/imgs/bg-4.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header__nav{
+    width: inherit;
+    display: flex;
+    padding: 1rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header__nav__logo{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--text-brown-2);
+}
+
+.nav__list{
+    list-style: none;
+}
+
+.nav__list__item{
+    display: inline-block;
+    margin: 0 3rem;
+    color: var(--text-brown);
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.header__content{
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  width: 50rem;
+  padding: .5rem;
+}
+
+.header__content h3{
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 4rem;
+    margin-top: 1rem;
+    color: var(--text-brown-2);
+}
+
+.header__content p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+    color: var(--text-brown);
+}
+
+.btn{
+    width: 15rem;
+    margin: 2rem auto;
+    border: 1px solid var(--text-brown);
+    padding: .3rem;
+}
+
+.btn button{
+    padding: 1rem;
+    width: 86%;
+    border: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    background: var(--text-brown-2);
+    color: #fff;
+    letter-spacing: .5px;
+}
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(24px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.about{
+    height: 80vh;
+    padding: 1rem;
+    background: url('/imgs/section-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.about__wrapper{
+    padding: 1rem;
+    margin: 0 auto 2rem auto;
+    width: 50%;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+.about__title{
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: 'Dancing Script', cursive;
+    color: var(--text-brown-2);
+    border-bottom: 1px solid var(--text-light-grey);
+    margin: 0 auto;
+    width: 27rem;
+}
+
+.about__text{
+    font-size: 1.5rem;
+    color: var(--text-brown);
+    margin-top: 2rem;
+}
+
+.about__products{
+    width: 100%;
+    display: grid;
+    gap: 1;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 320px;
+    margin-top: 5rem;
+}
+
+.about__products-card:nth-child(2){
+    border-right: 1px solid var(--text-light-grey);
+}
+
+.wrapper{
+    width: 33rem;
+    height: 25rem;
+    margin: auto;
+}
+
+.wrapper img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.about__products-card h3{
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    color: var(--text-brown-2);
+}
+
+.about__products-card p{
+    text-align: center;
+    color: var(--text-brown);
+}
+
+.info{
+    display: grid;
+    gap: 1;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 85vh;
+    /* margin: 10rem 0; */
+    margin-top: 5rem;
+    /* margin-bottom: 5rem; */
+    background: #FDFBF6;
+}
+
+.info.no-bg{
+    background: #fff;
+}
+
+.info__card{
+    position: relative;
+}
+
+.info__card.left{
+    background: url('/imgs/section-bg-3.png') no-repeat center center;
+    background-size: cover;
+    width: 550px;
+    height: 480px;
+}
+
+/* .info__card.sm{
+    width: 500px;
+    height: 500px;
+} */
+
+.info__card img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+}
+
+.info__card-inner{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+.info__card-inner h3{
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+    margin: 3rem 0;
+    color: var(--text-brown-2);
+    border-bottom: 1px solid var(--text-light-grey);
+    width: 27rem;
+}
+
+.info__card-inner p{
+    font-size: 1.5rem;
+    width: 60rem;
+    margin: 3rem 0;
+    color: var(--text-brown);
+}
+
+.info__btn{
+    position: absolute;
+    border: 1px solid var(--text-brown);
+    padding: .3rem;
+    width: 18rem;
+}
+
+.info__btn button{
+    padding: 1rem;
+    width: 89%;
+    border: none;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    background: var(--text-brown-2);
+    color: #fff;
+    letter-spacing: .5px;
+}
+
+.gallery{
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: var(--text-brown-2);
+    margin-top: 8rem;
+    border-bottom: 1px solid var(--text-light-grey);
+    width: 10rem;
+    margin: 0 auto;
+}
+
+.products{
+    /* margin-top: 5rem; */
+    display: grid;
+    gap: 1;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: 300px;
+    margin-top: 4rem;
+}
+
+.products__card{
+    overflow: hidden;
+    background: var(--text-primary);
+    position: relative;
+    cursor: pointer;
+}
+
+.products__info{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    background: var(--text-brown-2);
+    z-index: 100;
+    padding: .5rem;
+    width: 15rem;
+    height: 10rem;
+    opacity: 0;
+    transition: all .7s;
+}
+
+.products__info p{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.products__info h6{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+}
+
+.products__card:hover .products__info{
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.products__card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all .7s;
+    backface-visibility: hidden;
+}
+
+.products__card:hover img{
+    transform: scale(1.1);
+    opacity: .7;
+}
+
+.products__card.tall{
+    grid-row: span 2 / auto;
+}
+
+.products__card.wide{
+    grid-column: span 2 / auto;
+}
+
+.quote{
+    height: 85vh;
+    background: url('/imgs/bg-5.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.quote__content{
+    position: absolute;
+    top: 70%;
+    left: 90%;
+    transform: translate(-90%, -70%);
+    width: 50rem;
+}
+
+.quote__content h3{
+    font-size: 4rem;
+    font-family: 'Dancing Script', cursive;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    color: var(--text-brown-2);
+}
+
+.quote__content p{
+    font-size: 1.5rem;
+    color: var(--text-brown-3);
+}
+
+.contact{
+    height: 100vh;
+    margin-top: 2rem;
+    background: url('/imgs/contact.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.contact__content{
+    width: 50%;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    text-align: center;
+}
+
+.contact__content h3{
+    font-size: 3.5rem;
+    font-family: 'Dancing Script', cursive;
+    text-transform: capitalize;
+    color: var(--text-brown-2);
+    border-bottom: 1px solid var(--text-light-grey);
+    width: 30rem;
+    margin: 0 auto;
+}
+
+.contact__content h5{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--text-brown-3);
+}
+
+.contact__content p{
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    color: var(--text-brown-3);
+}
+
+.form{
+    margin-top: 3rem;
+    padding: 1rem;
+}
+
+.form__inner{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.form__inner input{
+    padding: 1rem;
+    width: 40%;
+}
+
+.form__message{
+    padding: 1rem;
+    width: 63rem;
+    height: 6rem;
+    resize: none;
+}
